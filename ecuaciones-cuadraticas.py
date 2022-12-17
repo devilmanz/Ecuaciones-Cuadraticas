@@ -1,5 +1,6 @@
 import cmath
 import math
+from fractions import Fraction
 
 def solve_quadratic_equation(a, b, c):
     """Resuelve la ecuación cuadrática de la forma ax^2 + bx + c = 0 y
@@ -35,17 +36,17 @@ while True:
     #Pedimos los valores de los coeficientes a, b y c
     while True:
         print("Introduce los valores de los coeficientes a, b y c de la ecuación cuadrática: ax^2 + bx + c = 0")
-        a = float(input("Valor de a: "))
+        a = Fraction(input("Valor de a: "))
         if a != 0:
             break
         print("El coeficiente a no puede ser cero, por favor introduce un valor distinto de cero.")
-    b = float(input("Valor de b: "))
-    c = float(input("Valor de c: "))
+    b = Fraction(input("Valor de b: "))
+    c = Fraction(input("Valor de c: "))
 
     #Resolvemos la ecuación cuadrática
     solutions = solve_quadratic_equation(a, b, c)
     
-    #Comprobamos si tiene solución
+    #Imprimimos las soluciones
     if all(solution == 0 for solution in solutions):
         print("Esta ecuación no tiene solución real ni compleja")
     elif len(solutions) == 1:
