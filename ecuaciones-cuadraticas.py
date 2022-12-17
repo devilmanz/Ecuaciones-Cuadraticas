@@ -34,7 +34,7 @@ def solve_quadratic_equation(a, b, c):
 while True:
     #Pedimos los valores de los coeficientes a, b y c
     while True:
-        print("Introduce los valores de los coeficientes a, b y c de la ecuación cuadrática: ax2 + bx + c = 0")
+        print("Introduce los valores de los coeficientes a, b y c de la ecuación cuadrática: ax^2 + bx + c = 0")
         a = float(input("Valor de a: "))
         if a != 0:
             break
