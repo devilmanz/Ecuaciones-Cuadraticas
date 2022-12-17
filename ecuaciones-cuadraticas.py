@@ -4,7 +4,7 @@ from math import sqrt
 #Iniciamos el ciclo
 while True:
     #Pedimos los valores de los coeficientes a, b y c
-    print("Introduce los valores de los coeficientes a, b y c de la ecuación cuadrática con la forma: ax2 + bx + c = 0")
+    print("Introduce los valores de los coeficientes a, b y c de la ecuación cuadrática: ax2 + bx + c = 0")
     a = float(input("Valor de a: "))
     b = float(input("Valor de b: "))
     c = float(input("Valor de c: "))
