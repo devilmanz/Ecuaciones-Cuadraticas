@@ -36,12 +36,20 @@ while True:
     #Pedimos los valores de los coeficientes a, b y c
     while True:
         print("Introduce los valores de los coeficientes a, b y c de la ecuación cuadrática: ax^2 + bx + c = 0")
-        a = Fraction(input("Valor de a: "))
-        if a != 0:
-            break
-        print("El coeficiente a no puede ser cero, por favor introduce un valor distinto de cero.")
-    b = Fraction(input("Valor de b: "))
-    c = Fraction(input("Valor de c: "))
+        try: 
+            a = Fraction(input("Valor de a: "))
+            if a != 0:
+                break
+            print("El coeficiente a no puede ser cero, por favor introduce un valor distinto de cero.")
+        except ValueError:
+            print("Por favor introduce un número en lugar de letras.")
+
+    try:
+        b = Fraction(input("Valor de b: "))
+        c = Fraction(input("Valor de c: "))
+    except ValueError:
+            print("Por favor introduce un número en lugar de letras.")
+            continue #volvemos a pedir los valores
 
     #Resolvemos la ecuación cuadrática
     solutions = solve_quadratic_equation(a, b, c)
