@@ -1,15 +1,9 @@
-import cmath
-import math
-from fractions import Fraction
+import cmath # para operar con numeros compejos
+import math # para trabajar mejor con numeros reales
+from fractions import Fraction # para operar con numeros fraccionarios
 
 def solve_quadratic_equation(a, b, c):
-    """Resuelve la ecuación cuadrática de la forma ax^2 + bx + c = 0 y
-    devuelve las soluciones reales o complejas según corresponda. Si la
-    ecuación tiene una solución real, devuelve una tupla con un único
-    elemento. Si la ecuación tiene dos soluciones reales, devuelve una
-    tupla con dos elementos. Si la ecuación tiene dos soluciones
-    complejas, devuelve una tupla con dos elementos."""
-    
+  
     #Comprobamos si a es cero
     if a == 0:
         raise ValueError("El coeficiente a no puede ser cero")
@@ -51,7 +45,7 @@ while True:
             print("Por favor introduce un número en lugar de letras.")
             continue #volvemos a pedir los valores
 
-    #Resolvemos la ecuación cuadrática
+    #Asignamos a una variable el valor de salida "return" de la función incial
     solutions = solve_quadratic_equation(a, b, c)
     
     #Imprimimos las soluciones
